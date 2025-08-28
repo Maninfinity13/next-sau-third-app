@@ -1,10 +1,20 @@
+'use client';
+
 import Image from "next/image";
 import bmrIcon from "../images/bmr.png";
+import Link from "next/link";
 
 export default function BMRPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-gray-100 px-4">
       <div className="w-full max-w-lg bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl text-center border border-white/20">
+        {/* Back to Home */}
+        <div className="text-left mb-4">
+          <Link href="/" className="text-purple-300 hover:text-purple-100 font-semibold">
+            &larr; Home
+          </Link>
+        </div>
+        
         {/* Title */}
         <h1 className="text-4xl font-extrabold mb-2 text-purple-300 drop-shadow-md">
           BMR Calculator

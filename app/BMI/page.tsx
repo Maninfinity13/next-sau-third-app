@@ -1,10 +1,26 @@
+'use client';
+
 import Image from "next/image";
 import bmiIcon from "../images/bmi.png";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function BMICalculatorPage() {
+  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState('');
+  const [bmiResult, setBmiResult] = useState('0.00');
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-gray-100 px-4">
       <div className="w-full max-w-lg bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl text-center border border-white/20">
+        {/* Back to Home */}
+        <div className="text-left mb-4">
+          <Link href="/" className="text-purple-300 hover:text-purple-100 font-semibold">
+            &larr;  Home
+          </Link>
+        </div>
+        
+        
         {/* Title */}
         <h1 className="text-4xl font-extrabold mb-2 text-purple-300 drop-shadow-md">
           BMI Calculator
@@ -35,6 +51,7 @@ export default function BMICalculatorPage() {
               น้ำหนัก (กก.)
             </label>
             <input
+              value={weight}
               type="number"
               id="weight"
               placeholder="เช่น 70"
@@ -51,6 +68,7 @@ export default function BMICalculatorPage() {
               ส่วนสูง (ซม.)
             </label>
             <input
+              value={height}
               type="number"
               id="height"
               placeholder="เช่น 170"
@@ -74,8 +92,7 @@ export default function BMICalculatorPage() {
           <h2 className="text-2xl font-semibold mb-3 text-purple-300">
             ผลลัพธ์:
           </h2>
-          <p id="result" className="text-5xl font-extrabold text-white">
-            0.00
+          <p id="result" className="text-5xl font-extrabold text-white">{bmiResult}
           </p>
         </div>
       </div>
