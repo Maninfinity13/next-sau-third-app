@@ -38,7 +38,7 @@ export default function Home() {
             hover:ring-4 hover:ring-purple-300 hover:ring-opacity-75 
             focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-75">
             <Image src={bmi} alt="BMI & BMR" width={80} height={80} className="mx-auto mb-4 rounded-full shadow-lg" />
-            <h2 className="text-3xl font-bold mb-4">คำนวณ BMI & BMR</h2>
+            <h2 className="text-3xl font-bold mb-4">คำนวณ BMI</h2>
             <p className="text-lg opacity-90">ประเมินสุขภาพของคุณด้วยดัชนีมวลกาย</p>
           </a>
 
